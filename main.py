@@ -22,6 +22,7 @@ st.set_page_config(page_title="Plant Counter", page_icon=":seedling:")
 
 # Add this at the beginning of the code
 TEMP_DIR = "temp_dir"
+SAMPLE_IMAGES_DIR = "sample_images"
 
 def main():
     st.title("Plant Counting and Analysis App")
