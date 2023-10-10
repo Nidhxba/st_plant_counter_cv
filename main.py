@@ -49,14 +49,15 @@ def main():
     #     example_image_path = ""
 
     #     if example_option == "Example 1":
-    #         example_image_path == "D:\XBA\venv\1.jpg"
-    #     elif example_option == "Example 2":
-    #         example_image_path = "D:\XBA\venv\WhatsApp Image 2023-09-21 at 12.18.26.jpg"
-    #     else:
-    #         example_image_path = "example_images/example3.jpg"
+    #         example_image_path = os.path.abspath(os.path.join(SAMPLE_IMAGES_DIR, "1.jpg"))
+    #     # elif example_option == "Example 2":
+    #     #     example_image_path = os.path.abspath(os.path.join(SAMPLE_IMAGES_DIR, "example2.jpg"))
+    #     # else:
+    #     #     example_image_path = os.path.abspath(os.path.join(SAMPLE_IMAGES_DIR, "example3.jpg"))
 
     #     st.image(example_image_path, caption="Example Image", use_column_width=True)
     #     process_image(example_image_path)
+
 
 def ensure_temp_dir_exists():
     if not os.path.exists(TEMP_DIR):
