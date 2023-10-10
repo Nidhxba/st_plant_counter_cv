@@ -55,8 +55,12 @@ def main():
         # else:
         #     example_image_path = os.path.abspath(os.path.join(SAMPLE_IMAGES_DIR, "example3.jpg"))
 
-        st.image(example_image_path, caption="Example Image", use_column_width=True)
-        process_image(example_image_path)
+        src = cv2.imread(example_image_path)
+        if src is None:
+            st.error(f"Failed to load the image from {example_image_path}")
+        else:
+            st.image(example_image_path, caption="Example Image", use_column_width=True)
+            process_image(example_image_path)
 
 
 def ensure_temp_dir_exists():
