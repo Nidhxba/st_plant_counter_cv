@@ -50,9 +50,9 @@ def main():
         example_image_path = ""
 
         if example_option == "Example 1":
-            example_image_path = os.path.abspath(os.path.join(SAMPLE_IMAGES_DIR, "D:\\XBA\\plant_counter\\1.jpg"))
+            example_image_path = os.path.abspath(os.path.join(SAMPLE_IMAGES_DIR, "./1.jpg"))
         elif example_option == "Example 2":
-            example_image_path = os.path.abspath(os.path.join(SAMPLE_IMAGES_DIR, "D:\\XBA\\plant_counter\\3.jpg"))
+            example_image_path = os.path.abspath(os.path.join(SAMPLE_IMAGES_DIR, "./3.jpg"))
         # else:
         #     example_image_path = os.path.abspath(os.path.join(SAMPLE_IMAGES_DIR, "example3.jpg"))
 
