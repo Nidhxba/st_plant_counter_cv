@@ -30,7 +30,7 @@ def main():
     ensure_temp_dir_exists()
 
     # Allow the user to choose between uploading an image or using an example
-    option = st.radio("Choose an option:", ["Upload an image"]) #"Use an Example"])
+    option = st.radio("Choose an option:", ["Upload an image", "Use an Example"])
 
     if option == "Upload an image":
         uploaded_image = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png", "mp4"])
@@ -42,21 +42,21 @@ def main():
                 f.write(uploaded_image.read())
             st.image(uploaded_image, caption="Uploaded Image", use_column_width=True)
             process_image(temp_image_path)
-    # else:
-    #     # Provide example options for users to choose from
-    #     example_option = st.selectbox("Choose an example:", ["Example 1", "Example 2", "Example 3"])
+    else:
+        # Provide example options for users to choose from
+        example_option = st.selectbox("Choose an example:", ["Example 1", "Example 2"])
 
-    #     example_image_path = ""
+        example_image_path = ""
 
-    #     if example_option == "Example 1":
-    #         example_image_path = os.path.abspath(os.path.join(SAMPLE_IMAGES_DIR, "1.jpg"))
-    #     # elif example_option == "Example 2":
-    #     #     example_image_path = os.path.abspath(os.path.join(SAMPLE_IMAGES_DIR, "example2.jpg"))
-    #     # else:
-    #     #     example_image_path = os.path.abspath(os.path.join(SAMPLE_IMAGES_DIR, "example3.jpg"))
+        if example_option == "Example 1":
+            example_image_path = os.path.abspath(os.path.join(SAMPLE_IMAGES_DIR, "1.jpg"))
+        elif example_option == "Example 2":
+            example_image_path = os.path.abspath(os.path.join(SAMPLE_IMAGES_DIR, "3.jpg"))
+        # else:
+        #     example_image_path = os.path.abspath(os.path.join(SAMPLE_IMAGES_DIR, "example3.jpg"))
 
-    #     st.image(example_image_path, caption="Example Image", use_column_width=True)
-    #     process_image(example_image_path)
+        st.image(example_image_path, caption="Example Image", use_column_width=True)
+        process_image(example_image_path)
 
 
 def ensure_temp_dir_exists():
