@@ -31,7 +31,7 @@ def main():
     ensure_temp_dir_exists()
 
     # Allow the user to choose between uploading an image or using an example
-    option = st.radio("Choose an option:", ["Upload an image", "Use an Example"])
+    option = st.radio("Choose an option:", ["Upload an image", "Use Examples"])
 
     if option == "Upload an image":
         uploaded_image = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png", "mp4"])
@@ -50,9 +50,9 @@ def main():
         example_image_path = ""
 
         if example_option == "Example 1":
-            example_image_path = os.path.abspath(os.path.join(SAMPLE_IMAGES_DIR, "1.jpg"))
+            example_image_path = os.path.abspath(os.path.join(SAMPLE_IMAGES_DIR, "D:\\XBA\\plant_counter\\1.jpg"))
         elif example_option == "Example 2":
-            example_image_path = os.path.abspath(os.path.join(SAMPLE_IMAGES_DIR, "3.jpg"))
+            example_image_path = os.path.abspath(os.path.join(SAMPLE_IMAGES_DIR, "D:\\XBA\\plant_counter\\3.jpg"))
         # else:
         #     example_image_path = os.path.abspath(os.path.join(SAMPLE_IMAGES_DIR, "example3.jpg"))
 
